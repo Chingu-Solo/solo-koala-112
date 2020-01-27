@@ -41,7 +41,7 @@ var sampleText = 'Then came the night of the first falling star.';
 for (i = 0; i < favoriteFonts.length; i++) { //adding cards inside main-section
     var newDiv = document.createElement("div");
     newDiv.className = "cards";
-    newDiv.innerHTML = favoriteFonts[i].fontName + "<div id='add'><span id='addicon'>+</span></div> " + "<br>" + "<div class='creator'>" + favoriteFonts[i].fontCreator + "</div>" + "<div class='content' style='font-family:" + favoriteFonts[i].fontName + "'>" + sampleText + "</div>";
+    newDiv.innerHTML = favoriteFonts[i].fontName + "<div id='add'><span id='addicon'>+</span></div> " + "<br>" + "<div class='creator'>" + favoriteFonts[i].fontCreator + "</div>" + "<div class='content' style='font-family:" +fontCreator.fontName[i] + favoriteFonts[i].fontName + "'>" + sampleText + "</div>";
     var j = document.getElementById("main-section");
     j.appendChild(newDiv);
 }

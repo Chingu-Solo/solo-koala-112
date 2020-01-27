@@ -124,12 +124,11 @@ option{
     opacity:0.5;
 }
 .content{
-    font-family: Chi;
     font-size: 24px;
     font-weight:bold;
     padding-top:3em;
     padding-bottom: 2em;
-    word-wrap: break-word;
+    word-break: break-all;
 }
 #add{
     /* height:1em; */
