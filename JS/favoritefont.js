@@ -41,7 +41,7 @@ var sampleText = 'Then came the night of the first falling star.';
 for (i = 0; i < favoriteFonts.length; i++) { //adding cards inside main-section
     var newDiv = document.createElement("div");
     newDiv.className = "cards";
-    newDiv.innerHTML = favoriteFonts[i].fontName + "<div id='add'><span id='addicon'>+</span></div> " + "<br>" + "<div class='creator'>" + favoriteFonts[i].fontCreator + "</div>" + "<div class='content' style='font-family:" +fontCreator.fontName[i] + favoriteFonts[i].fontName + "'>" + sampleText + "</div>";
+    newDiv.innerHTML = favoriteFonts[i].fontName + "<div id='add'><span id='addicon'>+</span></div> " + "<br>" + "<div class='creator'>" + favoriteFonts[i].fontCreator + "</div>" + "<div class='content' style='font-family:" + favoriteFonts[i].fontName + "'>" + sampleText + "</div>";
     var j = document.getElementById("main-section");
     j.appendChild(newDiv);
 }
@@ -50,9 +50,18 @@ var content = document.getElementsByClassName("content"); //getting array of con
 
 
 function update() { //updates cards content when something is typed in input box
+    if(document.getElementById("updateContent").value == ''){
+        setTimeout(function() {
+            for (k = 0; k < content.length; k++) {
+                content[k].innerHTML = sampleText;
+            }
+        },2000);
+    }
+    else{
     for (k = 0; k < content.length; k++) {
         content[k].innerHTML = document.getElementById("updateContent").value;
     }
+}
 }
 
 var opt = document.getElementById("options");
@@ -84,19 +93,7 @@ black.addEventListener("click", function () { //changes background color to blac
 });
 var white = document.getElementById("white");
 white.addEventListener("click", function () { // changes background color to white
-    document.body.style.backgroundColor = "white";
-    document.body.style.color = 'black';
-    var inputs = document.getElementsByTagName("input");
-    document.getElementById("refresh").src = "../assets/refresh.png"
-    var select = document.getElementsByTagName("select");
-    for (i = 0; i < inputs.length; i++) {
-        inputs[i].style.backgroundColor = "white";
-        inputs[i].style.color = "black";
-    }
-    for(i=0;i<select.length;i++){
-        select[i].style.backgroundColor = "white";
-        select[i].style.color = "black";
-    }
+        whiteClick();
 });
 
 var changeView = document.getElementById("changeView");
@@ -121,12 +118,31 @@ document.getElementById("refresh").addEventListener("click",
         for (k = 0; k < content.length; k++) {
             content[k].innerHTML = sampleText;
             content[k].style.fontSize = "24px";
-            opt.value="24px"
-
+            opt.value="24px";
         }
+        whiteClick();
         document.getElementById("updateContent").value = null;
+        document.getElementById("main-section").style.display = "grid";
+
     }
 )
+
+function whiteClick(){
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = 'black';
+    var inputs = document.getElementsByTagName("input");
+    document.getElementById("refresh").src = "../assets/refresh.png"
+    var select = document.getElementsByTagName("select");
+    for (i = 0; i < inputs.length; i++) {
+        inputs[i].style.backgroundColor = "white";
+        inputs[i].style.color = "black";
+    }
+    for(i=0;i<select.length;i++){
+        select[i].style.backgroundColor = "white";
+        select[i].style.color = "black";
+    }
+
+}
 
 window.onscroll  = function() {
     scrollToTop();
@@ -141,7 +157,7 @@ function scrollToTop() {
       }
 }
 
-function topFunc() {
+function topFunc() { //Scrolls page to top 
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
