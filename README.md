@@ -14,5 +14,5 @@ This app was created for the ChinguTier1 Project. It is a basic replica of Googl
 ## Running This Project
 ``` 
 git clone https://github.com/Chingu-Solo/solo-koala-112.git
-run index.html file directly
+run index.html file directly from View folder
 ```
