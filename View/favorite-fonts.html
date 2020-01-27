@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../css/favorite-fonts.css" />
-    <!-- Script Here -->
-    <script src="../JS/favoritefont.js"></script>
-    <!-- Script Ends -->
     <title>
         Google Favorite Fonts
     </title>
+
 </head>
+
 <body>
-    <div class="main-div">
+    <div id="main-div">
         <div class="toolbar">
             <div class="title">
                 Google Fonts
@@ -37,34 +36,48 @@
         <br>
         <hr>
     </div>
-    <div class="page-body">
+    <div id="page-body">
         <div class="editor">
             <div id="search-fonts">
                 <p>Search fonts</p>
             </div>
             <div id="type">
-                <input type="text" placeholder="Type Something">
+                <input type="text" placeholder="Type Something" id="updateContent" onkeyup="update()">
             </div>
             <div class="third-col">
                 <div id="font-size">
-                    <input type="text" value="32px">
+                    <select name="font-size" id="options">
+                        <option value="24px">24px</option>
+                        <option value="32px">32px</option>
+                        <option value="40px">40px</option>
+                        <option value="48px">48px</option>
+
+                    </select>
+                    <div id="font-size"></div>
                 </div>
                 <span id="black"></span>
                 <span id="white"></span>
             </div>
             <div class="fourth-col">
                 <div class="list">
-                    <img src="../assets/list.png" alt="list" height="20px" width="20px">
+                    <img src="../assets/listwhite.png" height="20px" width="20px" id="changeView">
                 </div>
                 <div class="refresh">
-                    <img src="../assets/refresh.png" alt="refresh" height="20px" width="20px">
+                    <img src="../assets/refresh.png" alt="refresh" height="20px" width="20px" id="refresh">
                 </div>
             </div>
         </div>
-        <div class="main-section">
-
+        <div id="main-section">
         </div>
     </div>
+    <div id="scrollToTopBtn">
+        <button onclick="topFunc()"><img src="../assets/top.png" alt="top"></button>
+    </div>
+    <div id="footer">
+        <p>Coded By BR3TT03 || 2020 || Chingu Tier1 Project</p>
+    </div>
 </body>
-
+<!-- Script Here -->
+<script src="../JS/favoritefont.js"></script>
+<!-- Script Ends -->
 </html>
