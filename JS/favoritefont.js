@@ -115,6 +115,7 @@ changeView.addEventListener("click", function () { // alters cards view from gri
 
 document.getElementById("refresh").addEventListener("click",
     function () { //Resets the  page content to default
+        if(window.outerWidth >745){
         for (k = 0; k < content.length; k++) {
             content[k].innerHTML = sampleText;
             content[k].style.fontSize = "24px";
@@ -123,6 +124,13 @@ document.getElementById("refresh").addEventListener("click",
         whiteClick();
         document.getElementById("updateContent").value = null;
         document.getElementById("main-section").style.display = "grid";
+        changeView.src = "../assets/listwhite.png";
+    }
+    else{
+        whiteClick();
+    }
+
+
 
     }
 )

@@ -167,6 +167,9 @@ option{
     #font-size,#type,#black,#white,#changeView{
         display: none;
     }
+    #refresh{
+        display: disabled;
+    }
 }
 #scrollToTopBtn{
     display:none;
