@@ -1,7 +1,7 @@
 # solo-koala-112
 ## Overview 
 This app was created for the ChinguTier1 Project. It is a basic replica of Google Fonts webapp. It is created with basic HTML,CSS and JavaScript.
-** Live Link : http://tier1project.bistaashish.com.np/
+**Live Link : http://tier1project.bistaashish.com.np/**
 
 ## Features
 * Responsive layout
