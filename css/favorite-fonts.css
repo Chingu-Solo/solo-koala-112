@@ -134,22 +134,18 @@ option{
     word-break: break-all;
 }
 #add{
-    /* height:1em; */
-    text-align:center;
-    width:1em;
     float:right;
-    font-weight: bold;
-    color:red;
-    border:1.5px solid red;
-    border-radius: 50%;
 }
 #add:hover{
     cursor:pointer;
 }
 #addicon{
-    margin-bottom:20px;
-    /* text-align:center; */
-    vertical-align: middle;
+    height:1.2em;
+    width:1.2em;
+    /* opacity:1; */
+    /* margin-bottom:20px;
+     text-align:center; */
+    vertical-align: middle; 
     
 }
 #changeView:hover{
